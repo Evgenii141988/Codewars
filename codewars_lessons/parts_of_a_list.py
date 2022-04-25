@@ -2,7 +2,7 @@
 of at least two elements into two non-empty parts."""
 
 
-def partlist(arr):
+def partlist(arr: list) -> list:
     result = []
     for i in range(1, len(arr)):
         result.append((' '.join(arr[:i]), ' '.join(arr[i:])))
@@ -19,6 +19,7 @@ out_list = [
 
 
 def test():
+    """test function"""
     for i, lst in enumerate(in_list):
         print(partlist(lst) == out_list[i])
 
